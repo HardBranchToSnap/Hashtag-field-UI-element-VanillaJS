@@ -54,9 +54,9 @@
         if (evt.keyCode == KEY_CODE_ENTER) {
 
             // Check for same hashtag
-            if (hashtags.filter(function(el) {
+            if (hashtags.some(function(el) {
                     return el == Element.NEW_HASHTAG_INPUT.value;
-                }).length > 0) {
+                })) {
                 return displayError(ErrorMessage.SAME_HASHTAG);
             }
 
